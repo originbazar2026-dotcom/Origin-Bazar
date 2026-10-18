@@ -20,6 +20,7 @@ import type {
   FileDownloadEvent,
   ShouldStartLoadRequest,
   WebViewErrorEvent,
+  WebViewMessageEvent,
   WebViewNavigation,
   WebViewProgressEvent,
 } from 'react-native-webview/lib/WebViewTypes';
@@ -35,6 +36,11 @@ type WebHandle = Pick<WebView, 'goBack' | 'reload' | 'injectJavaScript'>;
 
 // Error codes that only mean "navigation was cancelled" (e.g. we opened UPI / WhatsApp
 // outside the app). They are not real failures, so no error screen is shown.
+/** Oldest Chrome / Android System WebView version the website runs on. */
+const MIN_WEBVIEW_VERSION = 90;
+const ENGINE_CHECK_JS = `(function(){try{var m=navigator.userAgent.match(/Chrome\\/(\\d+)/);
+window.ReactNativeWebView.postMessage(JSON.stringify({obType:'wv',v:m?parseInt(m[1],10):0}));}catch(e){}})();true;`;
+
 const IGNORED_ERROR_CODES = new Set([-999, 102, 204, -10 /* Android ERROR_UNSUPPORTED_SCHEME */]);
 
 export default function App() {
@@ -81,6 +87,8 @@ function Shop() {
   const [webKey, setWebKey] = useState(0);
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
+  const [oldEngine, setOldEngine] = useState(false);
+  const engineChecked = useRef(false);
 
   const hideSplash = useCallback(() => {
     if (splashHidden.current) return;
@@ -203,6 +211,27 @@ function Shop() {
     Linking.openURL(nativeEvent.downloadUrl).catch(() => {});
   }, []);
 
+  // Android only: phones with an outdated "Android System WebView" show a blank shop.
+  // Detect it and ask the customer to update instead of leaving them on a white screen.
+  const onMessage = useCallback(({ nativeEvent }: WebViewMessageEvent): void => {
+    if (engineChecked.current) return;
+    try {
+      const msg = JSON.parse(nativeEvent.data);
+      if (msg && msg.obType === 'wv') {
+        engineChecked.current = true;
+        if (typeof msg.v === 'number' && msg.v > 0 && msg.v < MIN_WEBVIEW_VERSION) setOldEngine(true);
+      }
+    } catch {
+      // messages from the website itself are ignored
+    }
+  }, []);
+
+  const updateEngine = useCallback((): void => {
+    Linking.openURL('market://details?id=com.google.android.webview').catch(() =>
+      Linking.openURL('https://play.google.com/store/apps/details?id=com.google.android.webview').catch(() => {})
+    );
+  }, []);
+
   if (!startUrl) return <View style={styles.root} />;
 
   const barWidth = progress.interpolate({ inputRange: [0, 1], outputRange: ['0%', '100%'] });
@@ -248,6 +277,8 @@ function Shop() {
         onLoadProgress={onProgress}
         onLoadEnd={onLoadEnd}
         onError={onError}
+        injectedJavaScript={IS_ANDROID ? ENGINE_CHECK_JS : undefined}
+        onMessage={onMessage}
         renderError={renderBlank}
         onRenderProcessGone={recreateWebView}
         onContentProcessDidTerminate={reloadWebView}
@@ -261,6 +292,23 @@ function Shop() {
       )}
 
       {failed && <OfflineScreen onRetry={retry} />}
+
+      {oldEngine && !failed && (
+        <View style={styles.offline}>
+          <Image source={require('./assets/icon.png')} style={styles.offlineLogo} resizeMode="contain" />
+          <Text style={styles.offlineTitle}>One quick update needed</Text>
+          <Text style={styles.offlineText}>
+            Your phone's "Android System WebView" is out of date, so Origin Bazar can't show the shop.
+            Update it for free on Google Play, then reopen the app.
+          </Text>
+          <Pressable onPress={updateEngine} style={styles.retry} accessibilityRole="button">
+            <Text style={styles.retryText}>Update now</Text>
+          </Pressable>
+          <Pressable onPress={() => setOldEngine(false)} style={styles.secondary} accessibilityRole="button">
+            <Text style={styles.secondaryText}>Continue anyway</Text>
+          </Pressable>
+        </View>
+      )}
     </KeyboardAvoidingView>
   );
 }
@@ -308,4 +356,6 @@ const styles = StyleSheet.create({
   offlineText: { fontSize: 15, lineHeight: 22, color: BRAND.muted, textAlign: 'center', marginBottom: 28 },
   retry: { backgroundColor: BRAND.orange, paddingVertical: 14, paddingHorizontal: 40, borderRadius: 28 },
   retryText: { color: BRAND.white, fontSize: 16, fontWeight: '700' },
+  secondary: { marginTop: 14, paddingVertical: 10, paddingHorizontal: 24 },
+  secondaryText: { color: BRAND.navy, fontSize: 15, fontWeight: '600' },
 });

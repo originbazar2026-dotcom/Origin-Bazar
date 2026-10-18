@@ -277,7 +277,7 @@ function Shop() {
         onLoadProgress={onProgress}
         onLoadEnd={onLoadEnd}
         onError={onError}
-        injectedJavaScript={IS_ANDROID ? ENGINE_CHECK_JS : undefined}
+        injectedJavaScriptBeforeContentLoaded={IS_ANDROID ? ENGINE_CHECK_JS : undefined}
         onMessage={onMessage}
         renderError={renderBlank}
         onRenderProcessGone={recreateWebView}

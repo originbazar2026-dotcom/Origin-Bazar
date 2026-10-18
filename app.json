@@ -1,0 +1,107 @@
+{
+  "expo": {
+    "name": "Origin Bazar",
+    "slug": "origin-bazar",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "originbazar",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FFFFFF",
+    "primaryColor": "#FD6F0B",
+    "description": "Origin Bazar \u2014 Shop Originally, Live Better.",
+    "ios": {
+      "bundleIdentifier": "store.originbazar.app",
+      "buildNumber": "1",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Origin Bazar uses the camera so you can upload product, profile and document photos.",
+        "NSPhotoLibraryUsageDescription": "Origin Bazar needs photo access so you can upload product, profile and document images.",
+        "NSPhotoLibraryAddUsageDescription": "Origin Bazar saves invoices and images you download to your photo library.",
+        "NSMicrophoneUsageDescription": "Origin Bazar uses the microphone only when you record a video to upload.",
+        "LSApplicationQueriesSchemes": [
+          "upi",
+          "phonepe",
+          "paytmmp",
+          "tez",
+          "gpay",
+          "bhim",
+          "credpay",
+          "whatsapp",
+          "tg"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "store.originbazar.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "softwareKeyboardLayoutMode": "resize",
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.CAMERA"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "https",
+              "host": "originbazar.store"
+            },
+            {
+              "scheme": "https",
+              "host": "www.originbazar.store"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ],
+          "autoVerify": true
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 260,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "buildArchs": [
+              "arm64-v8a",
+              "armeabi-v7a"
+            ]
+          }
+        }
+      ],
+      "./plugins/withPaymentAppQueries",
+      "./plugins/withReleaseSigning"
+    ]
+  }
+}

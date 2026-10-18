@@ -2,13 +2,13 @@ Starting: Intent { cmp=store.originbazar.app/.MainActivity }
 Status: ok
 LaunchState: COLD
 Activity: store.originbazar.app/.MainActivity
-TotalTime: 3318
-WaitTime: 3325
+TotalTime: 4426
+WaitTime: 4432
 Complete
 Starting: Intent { cmp=store.originbazar.app/.MainActivity }
 Status: ok
 LaunchState: COLD
-Activity: com.google.android.apps.nexuslauncher/.NexusLauncherActivity
-TotalTime: 90
-WaitTime: 92
+Activity: store.originbazar.app/.MainActivity
+TotalTime: 1987
+WaitTime: 1989
 Complete

@@ -1,0 +1,14 @@
+Starting: Intent { cmp=store.originbazar.app/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: store.originbazar.app/.MainActivity
+TotalTime: 6337
+WaitTime: 6414
+Complete
+Starting: Intent { cmp=store.originbazar.app/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: store.originbazar.app/.MainActivity
+TotalTime: 3464
+WaitTime: 3658
+Complete

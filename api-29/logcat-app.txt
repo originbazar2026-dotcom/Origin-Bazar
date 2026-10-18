@@ -1,137 +1,178 @@
-10-18 09:19:02.989  2042  2042 I ExposureNotification: ThreadSafeLevelDbWrapper: do open LevelDb en-matching-request-db [CONTEXT service_id=236 ]
-10-18 09:19:02.989  2042  2042 I ExposureNotification: ThreadSafeLevelDbWrapper:en-matching-request-db instance ajdk@378599e created [CONTEXT service_id=236 ]
-10-18 09:19:02.989  2042  2042 I ExposureNotification: ThreadSafeLevelDbWrapper:en-matching-request-db instance ajdk@378599e closed [CONTEXT service_id=236 ]
-10-18 09:19:02.989  2042  2042 I ExposureNotification: ThreadSafeLevelDbWrapper: do close LevelDb en-matching-request-db [CONTEXT service_id=236 ]
-10-18 09:19:03.186  2042  2042 I ExposureNotification: ExposureServiceInternalService.onDestroy, com.google.android.gms.nearby.exposurenotification.service.ExposureNotificationInternalChimeraService@46eb669 [CONTEXT service_id=236 ]
-10-18 09:19:05.424  1767  1979 V installd: DexInv: --- END '/data/app/store.originbazar.app-6gKRGIcRmKaVDICWdQv_jQ==/base.apk' (success) ---
-10-18 09:19:05.428  1903  1943 V BackupManagerService: restoreAtInstall pkg=store.originbazar.app token=1 restoreSet=0
-10-18 09:19:05.442  2281  4752 I IntentFilterIntentOp: Verifying IntentFilter. verificationId:0 scheme:"https" hosts:"originbazar.store www.originbazar.store" package:"store.originbazar.app". [CONTEXT service_id=244 ]
-10-18 09:19:06.214  5235  5967 E BackupHelper: 	at libcore.io.IoBridge.open(IoBridge.java:496)
-10-18 09:19:06.214  5235  5967 E BackupHelper: 	at libcore.io.Linux.open(Native Method)
-10-18 09:19:06.214  5235  5967 E BackupHelper: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:06.214  5235  5967 E BackupHelper: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
-10-18 09:19:06.214  5235  5967 E BackupHelper: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:06.214  5235  5967 E BackupHelper: 	at libcore.io.IoBridge.open(IoBridge.java:482)
-10-18 09:19:06.293  3898  5672 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
-10-18 09:19:06.293  3898  5672 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
-10-18 09:19:06.293  3898  5672 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:06.293  3898  5672 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
-10-18 09:19:06.293  3898  5672 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:06.293  3898  5672 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
-10-18 09:19:06.346  1903  3109 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=store.originbazar.app/.MainActivity} from uid 2000
-10-18 09:19:06.531  3898  5672 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
-10-18 09:19:06.531  3898  5672 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
-10-18 09:19:06.531  3898  5672 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:06.531  3898  5672 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
-10-18 09:19:06.531  3898  5672 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:06.531  3898  5672 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
-10-18 09:19:06.578  1903  1930 I ActivityManager: Start proc 5985:store.originbazar.app/u0a146 for activity {store.originbazar.app/store.originbazar.app.MainActivity}
-10-18 09:19:06.633  3898  5672 E BugleRcsEngine: 	libcore.io.IoBridge.open(IoBridge.java:496)
-10-18 09:19:06.814  5985  5985 W SoLoader: Initializing SoLoader: 0
-10-18 09:19:06.814  5985  5985 W SoLoader: Recording new base apk path: /data/app/store.originbazar.app-6gKRGIcRmKaVDICWdQv_jQ==/base.apk
-10-18 09:19:06.814  5985  5985 W SoLoader: Previously recorded 0 base apk paths.
-10-18 09:19:06.814  5985  5985 I SoLoader: Preparing SO source: DirectorySoSource[root = /vendor/lib64 flags = 2]
-10-18 09:19:06.814  5985  5985 I SoLoader: Preparing SO source: DirectorySoSource[root = /system/lib64 flags = 2]
-10-18 09:19:06.814  5985  5985 I SoLoader: Preparing SO source: DirectApkSoSource[root = [/data/app/store.originbazar.app-6gKRGIcRmKaVDICWdQv_jQ==/base.apk!/lib/x86_64]]
-10-18 09:19:06.817  5985  5985 I SoLoader: Preparing SO source: ApplicationSoSource[DirectorySoSource[root = /data/app/store.originbazar.app-6gKRGIcRmKaVDICWdQv_jQ==/lib/x86_64 flags = 0]]
-10-18 09:19:06.817  5985  5985 I SoLoader: init finish: 4 SO sources prepared
-10-18 09:19:06.817  5985  5985 W SoLoader: SoLoader initialized: 8
-10-18 09:19:06.943  5985  6007 W libc    : Unable to set property "qemu.gles" to "1": connection failed; errno=13 (Permission denied)
-10-18 09:19:06.920  5985  5985 W RenderThread: type=1400 audit(0.0:33): avc: denied { write } for name="property_service" dev="tmpfs" ino=7559 scontext=u:r:untrusted_app:s0:c146,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0 app=store.originbazar.app
-10-18 09:19:07.259  5985  6013 I ExpoModulesCore: ✅ AppContext was initialized
-10-18 09:19:07.361  5985  6014 I ExpoModulesCore: ✅ JSI interop was installed
-10-18 09:19:07.363  5985  6014 I ExpoModulesCore: ✅ Constants were exported
-10-18 09:19:07.480  3898  5672 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
-10-18 09:19:07.480  3898  5672 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
-10-18 09:19:07.480  3898  5672 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:07.480  3898  5672 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
-10-18 09:19:07.480  3898  5672 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:07.480  3898  5672 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
-10-18 09:19:07.656  3898  5672 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
-10-18 09:19:07.656  3898  5672 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
-10-18 09:19:07.656  3898  5672 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:07.656  3898  5672 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
-10-18 09:19:07.656  3898  5672 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:07.656  3898  5672 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
-10-18 09:19:07.707  5985  6014 I ReactNativeJS: Running "main"
-10-18 09:19:08.072  1903  1930 I ActivityManager: Start proc 6044:com.google.android.webview:webview_service/u0a130 for service {com.google.android.webview/org.chromium.android_webview.services.VariationsSeedServer}
-10-18 09:19:08.081  5985  5985 I chromium: [INFO:library_loader_hooks.cc(50)] Chromium logging enabled: level = 0, default verbosity = 0
-10-18 09:19:08.135  5985  5985 I cr_BrowserStartup: Initializing chromium process, singleProcess=false
-10-18 09:19:08.154  1903  1930 I ActivityManager: Start proc 6065:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0/u0ai9000 for  {store.originbazar.app/org.chromium.content.app.SandboxedProcessService0}
-10-18 09:19:08.210  5985  5985 E chromium: [ERROR:filesystem_posix.cc(89)] stat /data/user/0/store.originbazar.app/cache/WebView/Crashpad: No such file or directory (2)
-10-18 09:19:08.210  5985  5985 E chromium: [ERROR:filesystem_posix.cc(62)] mkdir /data/user/0/store.originbazar.app/cache/WebView/Crashpad: No such file or directory (2)
-10-18 09:19:08.755  6065  6091 I chromium: [INFO:library_loader_hooks.cc(50)] Chromium logging enabled: level = 0, default verbosity = 0
-10-18 09:19:09.947  2042  5752 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
-10-18 09:19:09.957  2042  5752 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
-10-18 09:19:09.987  2281  5759 I ChromeSync: [Sync,SyncIntentOperation] Handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
-10-18 09:19:10.221  2281  5759 I ChromeSync: [Persistence,AffiliationManager] One of affiliation or grouping data for android://kmwFUO2u567RIRuR_eBr5MxHSOYdjxr74L0S85SaDQmhz0MGxy5mYq5Me4rnpXOoHX5S5bYSRETq-PQT5rH6aQ==@store.originbazar.app/ was not found. Marking affiliation data as stale...
-10-18 09:19:10.394  6044  6141 W cr_VariationsSeedFetch: 	at org.chromium.base.task.TaskRunnerImpl.d_(PG:50)
-10-18 09:19:12.335  5985  6192 D ProfileInstaller: Installing profile for store.originbazar.app
-10-18 09:19:13.689  6242  6242 I GAv4    :   adb shell setprop log.tag.GAv4 DEBUG
-10-18 09:19:14.310  1903  1928 I ActivityTaskManager: Displayed store.originbazar.app/.MainActivity: +7s775ms
-10-18 09:19:14.543  6273  6295 I GAv4    :   adb shell setprop log.tag.GAv4 DEBUG
-10-18 09:19:17.694  2866  3196 E LocalNetworkId: 	at libcore.io.IoBridge.open(IoBridge.java:496)
-10-18 09:19:17.694  2866  3196 E LocalNetworkId: 	at libcore.io.Linux.open(Native Method)
-10-18 09:19:17.694  2866  3196 E LocalNetworkId: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:17.694  2866  3196 E LocalNetworkId: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
-10-18 09:19:17.694  2866  3196 E LocalNetworkId: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:17.694  2866  3196 E LocalNetworkId: 	at libcore.io.IoBridge.open(IoBridge.java:482)
-10-18 09:19:19.289  1903  3109 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver
-10-18 09:19:19.289  1903  1929 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
-10-18 09:19:19.290  1903  1929 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
-10-18 09:19:19.290  1903  1929 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
-10-18 09:19:19.290  1903  1929 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
-10-18 09:19:19.290  1903  1929 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
-10-18 09:19:19.290  1903  1929 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.ims/.receivers.RcsAutoStartReceiver
-10-18 09:19:24.760  2281  5751 I ExposureNotification: Phenotype config updated, isEnabled: true [CONTEXT service_id=236 ]
-10-18 09:19:24.840  2042  2042 I ExposureNotification: ExposureNotificationInternalService.onCreate, com.google.android.gms.nearby.exposurenotification.service.ExposureNotificationInternalChimeraService@e911610 [CONTEXT service_id=236 ]
-10-18 09:19:24.843  2042  2042 I ExposureNotification: ExposureServiceInternalService.onStartCommand, Intent { act=com.google.android.gms.nearby.exposurenotification.service.ACTION_CLIENT_CHANGE cmp=com.google.android.gms/.nearby.exposurenotification.service.ExposureNotificationInternalService } [CONTEXT service_id=236 ]
-10-18 09:19:24.844  2042  2042 I ExposureNotification: Utils#isSupported enabled=true, isDeviceSupported=true, isBluetoothSupported=false, BluetoothAdapter.isMultipleAdvertisementSupported=false [CONTEXT service_id=236 ]
-10-18 09:19:24.845  2042  2042 I ExposureNotification: Exposure notifications disabled. [CONTEXT service_id=236 ]
-10-18 09:19:24.845  2042  2042 I ExposureNotification: ExposureServiceInternalService.stopTracing [CONTEXT service_id=236 ]
-10-18 09:19:24.846  2042  2042 I ExposureNotification: AlarmManagerImpl.opportunisticSchedule called, delay=1800000ms [CONTEXT service_id=236 ]
-10-18 09:19:24.850  2042  2042 I ExposureNotification: User turn off scanning. [CONTEXT service_id=236 ]
-10-18 09:19:24.850  2042  2042 I ExposureNotification: Not scanning! [CONTEXT service_id=236 ]
-10-18 09:19:24.850  2042  2042 W ExposureNotification: stopTracing called but Scanner failed to stop! [CONTEXT service_id=236 ]
-10-18 09:19:24.855  2042  2042 I ExposureNotification: ThreadSafeLevelDbWrapper: do open LevelDb contact-tracing-self-tracing-key-db [CONTEXT service_id=236 ]
-10-18 09:19:24.855  2042  2042 I ExposureNotification: ThreadSafeLevelDbWrapper:contact-tracing-self-tracing-key-db instance ajdk@1656727 created [CONTEXT service_id=236 ]
-10-18 09:19:24.855  2042  2042 I ExposureNotification: ThreadSafeLevelDbWrapper:contact-tracing-self-tracing-key-db instance ajdk@1656727 closed [CONTEXT service_id=236 ]
-10-18 09:19:24.855  2042  2042 I ExposureNotification: ThreadSafeLevelDbWrapper: do close LevelDb contact-tracing-self-tracing-key-db [CONTEXT service_id=236 ]
-10-18 09:19:24.968  2042  2042 I ExposureNotification: ExposureServiceInternalService.onDestroy, com.google.android.gms.nearby.exposurenotification.service.ExposureNotificationInternalChimeraService@e911610 [CONTEXT service_id=236 ]
-10-18 09:19:44.195  1903  2421 I ActivityManager: Force stopping store.originbazar.app appid=10146 user=0: from pid 6565
-10-18 09:19:44.196  1903  2421 I ActivityManager: Killing 5985:store.originbazar.app/u0a146 (adj 0): stop store.originbazar.app
-10-18 09:19:44.204  1903  2421 W ActivityTaskManager: Force removing ActivityRecord{a665672 u0 store.originbazar.app/.MainActivity t6 f}: app died, no saved state
-10-18 09:19:44.204  6065  6065 I AndroidRuntime: VM exiting with result code 0, cleanup skipped.
-10-18 09:19:44.226  1903  2421 I ActivityManager: Killing 6065:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0/u0a146i0 (adj 0): isolated not needed
-10-18 09:19:44.339  1903  1918 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=store.originbazar.app/.MainActivity} from uid 2000
-10-18 09:19:44.364  1903  1930 I ActivityManager: Start proc 6576:store.originbazar.app/u0a146 for activity {store.originbazar.app/store.originbazar.app.MainActivity}
-10-18 09:19:44.453  6576  6576 W SoLoader: Initializing SoLoader: 0
-10-18 09:19:44.453  6576  6576 W SoLoader: Recording new base apk path: /data/app/store.originbazar.app-6gKRGIcRmKaVDICWdQv_jQ==/base.apk
-10-18 09:19:44.453  6576  6576 W SoLoader: Previously recorded 0 base apk paths.
-10-18 09:19:44.454  6576  6576 I SoLoader: Preparing SO source: DirectorySoSource[root = /vendor/lib64 flags = 2]
-10-18 09:19:44.454  6576  6576 I SoLoader: Preparing SO source: DirectorySoSource[root = /system/lib64 flags = 2]
-10-18 09:19:44.454  6576  6576 I SoLoader: Preparing SO source: DirectApkSoSource[root = [/data/app/store.originbazar.app-6gKRGIcRmKaVDICWdQv_jQ==/base.apk!/lib/x86_64]]
-10-18 09:19:44.461  6576  6576 I SoLoader: Preparing SO source: ApplicationSoSource[DirectorySoSource[root = /data/app/store.originbazar.app-6gKRGIcRmKaVDICWdQv_jQ==/lib/x86_64 flags = 0]]
-10-18 09:19:44.461  6576  6576 I SoLoader: init finish: 4 SO sources prepared
-10-18 09:19:44.461  6576  6576 W SoLoader: SoLoader initialized: 8
-10-18 09:19:44.522  6576  6598 W libc    : Unable to set property "qemu.gles" to "1": connection failed; errno=13 (Permission denied)
-10-18 09:19:44.500  6576  6576 W RenderThread: type=1400 audit(0.0:35): avc: denied { write } for name="property_service" dev="tmpfs" ino=7559 scontext=u:r:untrusted_app:s0:c146,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0 app=store.originbazar.app
-10-18 09:19:44.688  6576  6601 I ExpoModulesCore: ✅ AppContext was initialized
-10-18 09:19:44.739  6576  6602 I ExpoModulesCore: ✅ JSI interop was installed
-10-18 09:19:44.740  6576  6602 I ExpoModulesCore: ✅ Constants were exported
-10-18 09:19:44.911  6576  6602 I ReactNativeJS: Running "main"
-10-18 09:19:45.041  6576  6576 I chromium: [INFO:library_loader_hooks.cc(50)] Chromium logging enabled: level = 0, default verbosity = 0
-10-18 09:19:45.053  6576  6576 I cr_BrowserStartup: Initializing chromium process, singleProcess=false
-10-18 09:19:45.063  1903  1930 I ActivityManager: Start proc 6626:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0/u0i1 for  {store.originbazar.app/org.chromium.content.app.SandboxedProcessService0}
-10-18 09:19:45.180  6626  6657 I chromium: [INFO:library_loader_hooks.cc(50)] Chromium logging enabled: level = 0, default verbosity = 0
-10-18 09:19:45.311  6576  6658 I chatty  : uid=10146(store.originbazar.app) Chrome_InProcGp identical 2 lines
-10-18 09:19:50.548  6576  6726 D ProfileInstaller: Skipping profile installation for store.originbazar.app
-10-18 09:19:51.156  1903  1928 I ActivityTaskManager: Displayed store.originbazar.app/.MainActivity: +6s813ms
-10-18 09:19:57.672  2866  6760 I chromium: [INFO:library_loader_hooks.cc(50)] Chromium logging enabled: level = 0, default verbosity = 0
-10-18 09:19:57.701  1903  1930 I ActivityManager: Start proc 6768:com.google.android.webview:webview_service/u0a130 for service {com.google.android.webview/org.chromium.android_webview.services.VariationsSeedServer}
-10-18 09:19:59.625  2866  6357 E LocalNetworkId: 	at libcore.io.IoBridge.open(IoBridge.java:496)
-10-18 09:19:59.625  2866  6357 E LocalNetworkId: 	at libcore.io.Linux.open(Native Method)
-10-18 09:19:59.625  2866  6357 E LocalNetworkId: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:59.625  2866  6357 E LocalNetworkId: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
-10-18 09:19:59.625  2866  6357 E LocalNetworkId: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
-10-18 09:19:59.625  2866  6357 E LocalNetworkId: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:17.751  4871  4871 I GAv4    :   adb shell setprop log.tag.GAv4 DEBUG
+10-18 09:28:18.294  1909  1940 I ActivityManager: Start proc 5008:com.android.chrome/u0a132 for service {com.android.chrome/org.chromium.chrome.browser.customtabs.CustomTabsConnectionService}
+10-18 09:28:18.394  4247  4443 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:18.394  4247  4443 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:18.394  4247  4443 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:18.394  4247  4443 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:18.394  4247  4443 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:18.394  4247  4443 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:18.674  4247  4443 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:18.674  4247  4443 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:18.674  4247  4443 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:18.674  4247  4443 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:18.674  4247  4443 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:18.674  4247  4443 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:18.746  5085  5085 I GAv4    :   adb shell setprop log.tag.GAv4 DEBUG
+10-18 09:28:18.812  4247  4443 E BugleRcsEngine: 	libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:18.894  4247  4443 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:18.894  4247  4443 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:18.894  4247  4443 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:18.894  4247  4443 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:18.894  4247  4443 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:18.894  4247  4443 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:19.050  4247  4443 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:19.050  4247  4443 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:19.050  4247  4443 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:19.050  4247  4443 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:19.050  4247  4443 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:19.050  4247  4443 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:19.599  2060  3369 I aopq    : Scheduling Phenotype for a PhenotypeSyncImmediately(6, org.chromium.net.cronet) one off with window [1, 2] in seconds [CONTEXT service_id=51 ]
+10-18 09:28:19.740  5334  5371 E GEL_DELAYED_EVENT_DEBUG: Failed delayed event dispatch, no dispatchers.
+10-18 09:28:19.816  1767  2793 V installd: DexInv: --- END '/data/app/store.originbazar.app-wxz3Cyi5-JC7yJp4M-SiPw==/base.apk' (success) ---
+10-18 09:28:19.833  1909  1955 V BackupManagerService: restoreAtInstall pkg=store.originbazar.app token=1 restoreSet=0
+10-18 09:28:19.928  2505  4625 I IntentFilterIntentOp: Verifying IntentFilter. verificationId:0 scheme:"https" hosts:"originbazar.store www.originbazar.store" package:"store.originbazar.app". [CONTEXT service_id=244 ]
+10-18 09:28:20.282  2099  2146 E BackupHelper: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:20.282  2099  2146 E BackupHelper: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:20.282  2099  2146 E BackupHelper: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:20.282  2099  2146 E BackupHelper: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:20.282  2099  2146 E BackupHelper: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:20.282  2099  2146 E BackupHelper: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:20.359  2505  4620 I ExposureNotification: ExposureNotificationInitIntentOperation.onInitRuntimeState [CONTEXT service_id=236 ]
+10-18 09:28:20.389  2060  2060 I ExposureNotification: ExposureNotificationInternalService.onCreate, com.google.android.gms.nearby.exposurenotification.service.ExposureNotificationInternalChimeraService@1a7ed6a [CONTEXT service_id=236 ]
+10-18 09:28:20.412  2060  2060 I ExposureNotification: ExposureServiceInternalService.onStartCommand, Intent { act=com.google.android.gms.nearby.exposurenotification.service.ACTION_CLIENT_CHANGE cmp=com.google.android.gms/.nearby.exposurenotification.service.ExposureNotificationInternalService } [CONTEXT service_id=236 ]
+10-18 09:28:20.466  2060  2060 I ExposureNotification: Utils#isSupported enabled=true, isDeviceSupported=true, isBluetoothSupported=false, BluetoothAdapter.isMultipleAdvertisementSupported=false [CONTEXT service_id=236 ]
+10-18 09:28:20.470  2060  2060 I ExposureNotification: Exposure notifications disabled. [CONTEXT service_id=236 ]
+10-18 09:28:20.470  2060  2060 I ExposureNotification: ExposureServiceInternalService.stopTracing [CONTEXT service_id=236 ]
+10-18 09:28:20.513  2060  2060 I ExposureNotification: AlarmManagerImpl.opportunisticSchedule called, delay=1800000ms [CONTEXT service_id=236 ]
+10-18 09:28:20.517  2060  2060 I ExposureNotification: User turn off scanning. [CONTEXT service_id=236 ]
+10-18 09:28:20.517  2060  2060 I ExposureNotification: Not scanning! [CONTEXT service_id=236 ]
+10-18 09:28:20.517  2060  2060 W ExposureNotification: stopTracing called but Scanner failed to stop! [CONTEXT service_id=236 ]
+10-18 09:28:20.535  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper: do open LevelDb contact-tracing-self-tracing-key-db [CONTEXT service_id=236 ]
+10-18 09:28:20.535  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper:contact-tracing-self-tracing-key-db instance ajdk@b87f5c3 created [CONTEXT service_id=236 ]
+10-18 09:28:20.556  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper:contact-tracing-self-tracing-key-db instance ajdk@b87f5c3 closed [CONTEXT service_id=236 ]
+10-18 09:28:20.556  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper: do close LevelDb contact-tracing-self-tracing-key-db [CONTEXT service_id=236 ]
+10-18 09:28:20.574  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper: do open LevelDb en-matching-request-db [CONTEXT service_id=236 ]
+10-18 09:28:20.574  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper:en-matching-request-db instance ajdk@aa05f17 created [CONTEXT service_id=236 ]
+10-18 09:28:20.575  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper:en-matching-request-db instance ajdk@aa05f17 closed [CONTEXT service_id=236 ]
+10-18 09:28:20.576  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper: do close LevelDb en-matching-request-db [CONTEXT service_id=236 ]
+10-18 09:28:20.589  4247  5178 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:20.589  4247  5178 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:20.589  4247  5178 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:20.589  4247  5178 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:20.589  4247  5178 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:20.589  4247  5178 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:20.817  1909  2904 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=store.originbazar.app/.MainActivity} from uid 2000
+10-18 09:28:20.879  4247  5178 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:20.879  4247  5178 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:20.879  4247  5178 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:20.879  4247  5178 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:20.879  4247  5178 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:20.879  4247  5178 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:20.986  2060  2060 I ExposureNotification: ExposureServiceInternalService.onDestroy, com.google.android.gms.nearby.exposurenotification.service.ExposureNotificationInternalChimeraService@1a7ed6a [CONTEXT service_id=236 ]
+10-18 09:28:21.013  1909  1940 I ActivityManager: Start proc 5553:store.originbazar.app/u0a146 for activity {store.originbazar.app/store.originbazar.app.MainActivity}
+10-18 09:28:21.022  4247  5178 E BugleRcsEngine: 	libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:21.276  4247  5178 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:21.276  4247  5178 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:21.276  4247  5178 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:21.276  4247  5178 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:21.276  4247  5178 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:21.276  4247  5178 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:21.315  5553  5553 W SoLoader: Initializing SoLoader: 0
+10-18 09:28:21.315  5553  5553 W SoLoader: Recording new base apk path: /data/app/store.originbazar.app-wxz3Cyi5-JC7yJp4M-SiPw==/base.apk
+10-18 09:28:21.315  5553  5553 W SoLoader: Previously recorded 0 base apk paths.
+10-18 09:28:21.315  5553  5553 I SoLoader: Preparing SO source: DirectorySoSource[root = /vendor/lib64 flags = 2]
+10-18 09:28:21.315  5553  5553 I SoLoader: Preparing SO source: DirectorySoSource[root = /system/lib64 flags = 2]
+10-18 09:28:21.315  5553  5553 I SoLoader: Preparing SO source: DirectApkSoSource[root = [/data/app/store.originbazar.app-wxz3Cyi5-JC7yJp4M-SiPw==/base.apk!/lib/x86_64]]
+10-18 09:28:21.320  5553  5553 I SoLoader: Preparing SO source: ApplicationSoSource[DirectorySoSource[root = /data/app/store.originbazar.app-wxz3Cyi5-JC7yJp4M-SiPw==/lib/x86_64 flags = 0]]
+10-18 09:28:21.320  5553  5553 I SoLoader: init finish: 4 SO sources prepared
+10-18 09:28:21.320  5553  5553 W SoLoader: SoLoader initialized: 8
+10-18 09:28:21.442  5553  5592 W libc    : Unable to set property "qemu.gles" to "1": connection failed; errno=13 (Permission denied)
+10-18 09:28:21.478  4247  5178 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:21.478  4247  5178 W RcsProvisioning: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:21.478  4247  5178 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:21.478  4247  5178 W RcsProvisioning: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:21.478  4247  5178 W RcsProvisioning: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:21.478  4247  5178 W RcsProvisioning: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:21.598  5553  5604 I ExpoModulesCore: ✅ AppContext was initialized
+10-18 09:28:21.671  5553  5605 I ExpoModulesCore: ✅ JSI interop was installed
+10-18 09:28:21.672  5553  5605 I ExpoModulesCore: ✅ Constants were exported
+10-18 09:28:21.735  5553  5605 I ReactNativeJS: Running "main"
+10-18 09:28:21.969  5553  5553 I chromium: [INFO:library_loader_hooks.cc(50)] Chromium logging enabled: level = 0, default verbosity = 0
+10-18 09:28:21.998  1909  1940 I ActivityManager: Start proc 5647:com.google.android.webview:webview_service/u0a130 for service {com.google.android.webview/org.chromium.android_webview.services.VariationsSeedServer}
+10-18 09:28:22.026  5553  5553 I cr_BrowserStartup: Initializing chromium process, singleProcess=false
+10-18 09:28:22.039  1909  1940 I ActivityManager: Start proc 5666:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0/u0ai9000 for  {store.originbazar.app/org.chromium.content.app.SandboxedProcessService0}
+10-18 09:28:22.125  5553  5553 E chromium: [ERROR:filesystem_posix.cc(89)] stat /data/user/0/store.originbazar.app/cache/WebView/Crashpad: No such file or directory (2)
+10-18 09:28:22.125  5553  5553 E chromium: [ERROR:filesystem_posix.cc(62)] mkdir /data/user/0/store.originbazar.app/cache/WebView/Crashpad: No such file or directory (2)
+10-18 09:28:22.590  5666  5706 I chromium: [INFO:library_loader_hooks.cc(50)] Chromium logging enabled: level = 0, default verbosity = 0
+10-18 09:28:22.970  2060  5627 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+10-18 09:28:22.972  2060  5608 W GCM     : Unexpected forwarded intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) }
+10-18 09:28:22.991  2505  4631 I ChromeSync: [Sync,SyncIntentOperation] Handling the intent: Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }.
+10-18 09:28:23.014  2505  4631 I ChromeSync: [Persistence,AffiliationManager] One of affiliation or grouping data for android://kmwFUO2u567RIRuR_eBr5MxHSOYdjxr74L0S85SaDQmhz0MGxy5mYq5Me4rnpXOoHX5S5bYSRETq-PQT5rH6aQ==@store.originbazar.app/ was not found. Marking affiliation data as stale...
+10-18 09:28:21.429  5553  5553 W RenderThread: type=1400 audit(0.0:27): avc: denied { write } for name="property_service" dev="tmpfs" ino=6825 scontext=u:r:untrusted_app:s0:c146,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0 app=store.originbazar.app
+10-18 09:28:23.360  5334  5549 W android.youtub: Long monitor contention with owner gads-4 (5531) at int libcore.io.Linux.readBytes(java.io.FileDescriptor, java.lang.Object, int, int)(Linux.java:-2) waiters=0 in void com.google.android.ads.tasks.d.a() for 378ms
+10-18 09:28:24.426  1909  1938 I ActivityTaskManager: Displayed store.originbazar.app/.MainActivity: +3s318ms
+10-18 09:28:26.488  5553  5800 D ProfileInstaller: Installing profile for store.originbazar.app
+10-18 09:28:26.970  5801  5829 W libc    : Unable to set property "qemu.gles" to "1": connection failed; errno=13 (Permission denied)
+10-18 09:28:31.851  2984  3419 E LocalNetworkId: 	at libcore.io.IoBridge.open(IoBridge.java:496)
+10-18 09:28:31.851  2984  3419 E LocalNetworkId: 	at libcore.io.Linux.open(Native Method)
+10-18 09:28:31.851  2984  3419 E LocalNetworkId: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:31.851  2984  3419 E LocalNetworkId: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:252)
+10-18 09:28:31.851  2984  3419 E LocalNetworkId: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:167)
+10-18 09:28:31.851  2984  3419 E LocalNetworkId: 	at libcore.io.IoBridge.open(IoBridge.java:482)
+10-18 09:28:33.117  1909  2417 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.packageinstaller/com.android.packageinstaller.PackageInstalledReceiver
+10-18 09:28:33.117  1909  1939 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.android.musicfx/.Compatibility$Receiver
+10-18 09:28:33.117  1909  1939 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.gms/.games.chimera.GamesSystemBroadcastReceiverProxy
+10-18 09:28:33.117  1909  1939 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+10-18 09:28:33.117  1909  1939 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+10-18 09:28:33.117  1909  1939 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.googlequicksearchbox/com.google.android.apps.gsa.googlequicksearchbox.GelStubAppWatcher
+10-18 09:28:33.117  1909  1939 W BroadcastQueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package:store.originbazar.app flg=0x4000010 (has extras) } to com.google.android.ims/.receivers.RcsAutoStartReceiver
+10-18 09:28:33.952  6096  6096 I GAv4    :   adb shell setprop log.tag.GAv4 DEBUG
+10-18 09:28:34.140  6125  6153 I GAv4    :   adb shell setprop log.tag.GAv4 DEBUG
+10-18 09:28:34.876  2505  5971 I ExposureNotification: Phenotype config updated, isEnabled: true [CONTEXT service_id=236 ]
+10-18 09:28:34.922  2060  2060 I ExposureNotification: ExposureNotificationInternalService.onCreate, com.google.android.gms.nearby.exposurenotification.service.ExposureNotificationInternalChimeraService@6edfe16 [CONTEXT service_id=236 ]
+10-18 09:28:34.923  2060  2060 I ExposureNotification: ExposureServiceInternalService.onStartCommand, Intent { act=com.google.android.gms.nearby.exposurenotification.service.ACTION_CLIENT_CHANGE cmp=com.google.android.gms/.nearby.exposurenotification.service.ExposureNotificationInternalService } [CONTEXT service_id=236 ]
+10-18 09:28:34.940  2060  2060 I ExposureNotification: Utils#isSupported enabled=true, isDeviceSupported=true, isBluetoothSupported=false, BluetoothAdapter.isMultipleAdvertisementSupported=false [CONTEXT service_id=236 ]
+10-18 09:28:34.940  2060  2060 I ExposureNotification: Exposure notifications disabled. [CONTEXT service_id=236 ]
+10-18 09:28:34.940  2060  2060 I ExposureNotification: ExposureServiceInternalService.stopTracing [CONTEXT service_id=236 ]
+10-18 09:28:34.945  2060  2060 I ExposureNotification: AlarmManagerImpl.opportunisticSchedule called, delay=1800000ms [CONTEXT service_id=236 ]
+10-18 09:28:34.946  2060  2060 I ExposureNotification: User turn off scanning. [CONTEXT service_id=236 ]
+10-18 09:28:34.946  2060  2060 I ExposureNotification: Not scanning! [CONTEXT service_id=236 ]
+10-18 09:28:34.946  2060  2060 W ExposureNotification: stopTracing called but Scanner failed to stop! [CONTEXT service_id=236 ]
+10-18 09:28:34.948  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper: do open LevelDb contact-tracing-self-tracing-key-db [CONTEXT service_id=236 ]
+10-18 09:28:34.948  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper:contact-tracing-self-tracing-key-db instance ajdk@c52be99 created [CONTEXT service_id=236 ]
+10-18 09:28:34.949  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper:contact-tracing-self-tracing-key-db instance ajdk@c52be99 closed [CONTEXT service_id=236 ]
+10-18 09:28:34.949  2060  2060 I ExposureNotification: ThreadSafeLevelDbWrapper: do close LevelDb contact-tracing-self-tracing-key-db [CONTEXT service_id=236 ]
+10-18 09:28:34.978  2060  2060 I ExposureNotification: ExposureServiceInternalService.onDestroy, com.google.android.gms.nearby.exposurenotification.service.ExposureNotificationInternalChimeraService@6edfe16 [CONTEXT service_id=236 ]
+10-18 09:28:54.197  1909  6278 I ActivityManager: Force stopping store.originbazar.app appid=10146 user=0: from pid 6311
+10-18 09:28:54.197  1909  6278 I ActivityManager: Killing 5553:store.originbazar.app/u0a146 (adj 0): stop store.originbazar.app
+10-18 09:28:54.203  1909  6278 W ActivityTaskManager: Force removing ActivityRecord{4b3ab9b u0 store.originbazar.app/.MainActivity t6 f}: app died, no saved state
+10-18 09:28:54.210  5666  5666 I AndroidRuntime: VM exiting with result code 0, cleanup skipped.
+10-18 09:28:54.237  1909  2006 W InputDispatcher: channel 'b09793f store.originbazar.app/store.originbazar.app.MainActivity (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+10-18 09:28:54.237  1909  2006 E InputDispatcher: channel 'b09793f store.originbazar.app/store.originbazar.app.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+10-18 09:28:54.237  1909  6278 W InputDispatcher: Attempted to unregister already unregistered input channel 'b09793f store.originbazar.app/store.originbazar.app.MainActivity (server)'
+10-18 09:28:54.241  1909  5791 E InputDispatcher: Window handle Window{b09793f u0 store.originbazar.app/store.originbazar.app.MainActivity} has no registered input channel
+10-18 09:28:54.254  1909  6278 I ActivityManager: Killing 5666:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0/u0a146i0 (adj 0): isolated not needed
+10-18 09:28:54.296  1909  5440 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=store.originbazar.app/.MainActivity} from uid 2000
+10-18 09:28:54.342  1909  1940 I ActivityManager: Start proc 6324:store.originbazar.app/u0a146 for activity {store.originbazar.app/store.originbazar.app.MainActivity}
+10-18 09:28:54.393  6324  6324 W SoLoader: Initializing SoLoader: 0
+10-18 09:28:54.393  6324  6324 W SoLoader: Recording new base apk path: /data/app/store.originbazar.app-wxz3Cyi5-JC7yJp4M-SiPw==/base.apk
+10-18 09:28:54.393  6324  6324 W SoLoader: Previously recorded 0 base apk paths.
+10-18 09:28:54.394  1909  1938 I ActivityTaskManager: Displayed store.originbazar.app/.MainActivity: +90ms
+10-18 09:28:54.395  6324  6324 I SoLoader: Preparing SO source: DirectorySoSource[root = /vendor/lib64 flags = 2]
+10-18 09:28:54.396  6324  6324 I SoLoader: Preparing SO source: DirectorySoSource[root = /system/lib64 flags = 2]
+10-18 09:28:54.396  6324  6324 I SoLoader: Preparing SO source: DirectApkSoSource[root = [/data/app/store.originbazar.app-wxz3Cyi5-JC7yJp4M-SiPw==/base.apk!/lib/x86_64]]
+10-18 09:28:54.399  6324  6324 I SoLoader: Preparing SO source: ApplicationSoSource[DirectorySoSource[root = /data/app/store.originbazar.app-wxz3Cyi5-JC7yJp4M-SiPw==/lib/x86_64 flags = 0]]
+10-18 09:28:54.399  6324  6324 I SoLoader: init finish: 4 SO sources prepared
+10-18 09:28:54.399  6324  6324 W SoLoader: SoLoader initialized: 8
+10-18 09:28:54.448  6324  6346 W libc    : Unable to set property "qemu.gles" to "1": connection failed; errno=13 (Permission denied)
+10-18 09:28:54.429  6324  6324 W RenderThread: type=1400 audit(0.0:30): avc: denied { write } for name="property_service" dev="tmpfs" ino=6825 scontext=u:r:untrusted_app:s0:c146,c256,c512,c768 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=0 app=store.originbazar.app
+10-18 09:28:54.522  6324  6349 I ExpoModulesCore: ✅ AppContext was initialized
+10-18 09:28:54.547  6324  6350 I ExpoModulesCore: ✅ JSI interop was installed
+10-18 09:28:54.548  6324  6350 I ExpoModulesCore: ✅ Constants were exported
+10-18 09:28:54.579  6324  6350 I ReactNativeJS: Running "main"
+10-18 09:28:54.695  6324  6324 I chromium: [INFO:library_loader_hooks.cc(50)] Chromium logging enabled: level = 0, default verbosity = 0
+10-18 09:28:54.703  6324  6324 I cr_BrowserStartup: Initializing chromium process, singleProcess=false
+10-18 09:28:54.712  1909  1940 I ActivityManager: Start proc 6366:com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0/u0i1 for  {store.originbazar.app/org.chromium.content.app.SandboxedProcessService0}
+10-18 09:28:54.892  6366  6384 I chromium: [INFO:library_loader_hooks.cc(50)] Chromium logging enabled: level = 0, default verbosity = 0
+10-18 09:28:55.012  6324  6398 I chatty  : uid=10146(store.originbazar.app) Chrome_InProcGp identical 2 lines
+10-18 09:29:00.443  6324  6426 D ProfileInstaller: Skipping profile installation for store.originbazar.app

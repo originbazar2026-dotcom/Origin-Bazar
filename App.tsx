@@ -1,11 +1,11 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { Component, useCallback, useEffect, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
 import {
   Animated,
   BackHandler,
   Image,
   KeyboardAvoidingView,
   Linking,
-  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -30,11 +30,11 @@ import { deepLinkToPage, IS_ANDROID, openExternal, shouldOpenExternally } from '
 SplashScreen.preventAutoHideAsync().catch(() => {});
 SplashScreen.setOptions({ fade: true, duration: 300 });
 
-// Error codes that only mean "navigation was cancelled" (e.g. we opened UPI / WhatsApp
-// outside the app). They are not real failures, so no error screen is shown.
 /** The few WebView methods the app calls. */
 type WebHandle = Pick<WebView, 'goBack' | 'reload' | 'injectJavaScript'>;
 
+// Error codes that only mean "navigation was cancelled" (e.g. we opened UPI / WhatsApp
+// outside the app). They are not real failures, so no error screen is shown.
 const IGNORED_ERROR_CODES = new Set([-999, 102, 204, -10 /* Android ERROR_UNSUPPORTED_SCHEME */]);
 
 export default function App() {
@@ -42,10 +42,32 @@ export default function App() {
     <SafeAreaProvider>
       <SafeAreaView style={styles.root} edges={['top', 'bottom']}>
         <StatusBar style="dark" />
-        <Shop />
+        <SafetyNet>
+          <Shop />
+        </SafetyNet>
       </SafeAreaView>
     </SafeAreaProvider>
   );
+}
+
+/** Catches any unexpected screen error and offers a reload instead of closing the app. */
+class SafetyNet extends Component<{ children: ReactNode }, { broken: boolean; attempt: number }> {
+  state = { broken: false, attempt: 0 };
+
+  static getDerivedStateFromError() {
+    return { broken: true };
+  }
+
+  componentDidCatch() {
+    SplashScreen.hideAsync().catch(() => {});
+  }
+
+  reset = () => this.setState((s) => ({ broken: false, attempt: s.attempt + 1 }));
+
+  render() {
+    if (this.state.broken) return <OfflineScreen onRetry={this.reset} title="Something went wrong" />;
+    return <View key={this.state.attempt} style={styles.root}>{this.props.children}</View>;
+  }
 }
 
 function Shop() {
@@ -216,7 +238,6 @@ function Shop() {
         overScrollMode="never"
         androidLayerType="hardware"
         mixedContentMode="never"
-        decelerationRate="normal"
         contentInsetAdjustmentBehavior="never"
         automaticallyAdjustContentInsets={false}
         startInLoadingState={false}
@@ -248,13 +269,15 @@ function renderBlank() {
   return <View style={styles.blank} />;
 }
 
-function OfflineScreen({ onRetry }: { onRetry: () => void }) {
+function OfflineScreen({ onRetry, title }: { onRetry: () => void; title?: string }) {
   return (
     <View style={styles.offline}>
       <Image source={require('./assets/icon.png')} style={styles.offlineLogo} resizeMode="contain" />
-      <Text style={styles.offlineTitle}>You're offline</Text>
+      <Text style={styles.offlineTitle}>{title ?? "You're offline"}</Text>
       <Text style={styles.offlineText}>
-        Origin Bazar couldn't load. Check your internet connection and try again.
+        {title
+          ? 'Please tap Try again to reload Origin Bazar.'
+          : "Origin Bazar couldn't load. Check your internet connection and try again."}
       </Text>
       <Pressable
         onPress={onRetry}

@@ -1,0 +1,98 @@
+# Opens the app on real Android emulators and saves crash logs to the "ci-logs" branch.
+name: Test on Android emulator
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: emulator-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  emulator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      matrix:
+        api: [29, 34]
+    env:
+      EXPO_NO_TELEMETRY: 1
+      CI: 1
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - run: npm ci
+
+      - run: npx expo prebuild --clean --platform android --no-install
+
+      - name: Build release APK for emulator (x86_64)
+        working-directory: android
+        run: ./gradlew assembleRelease -PreactNativeArchitectures=x86_64 --no-daemon
+
+      - name: Run app on emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api }}
+          arch: x86_64
+          target: google_apis
+          force-avd-creation: false
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: bash .github/scripts/smoke-test.sh ${{ matrix.api }} android/app/build/outputs/apk/release/app-release.apk
+
+      - name: Report result
+        if: always()
+        run: |
+          R=$(cat ci-logs/api-${{ matrix.api }}/result.txt 2>/dev/null || echo "NO RESULT")
+          echo "::notice::API ${{ matrix.api }}: $R"
+          if [ -s ci-logs/api-${{ matrix.api }}/crash.txt ]; then
+            head -c 3000 ci-logs/api-${{ matrix.api }}/crash.txt | tr '\n' ' ' | sed 's/^/::error::CRASH /'
+            echo
+          fi
+
+      - name: Save logs to ci-logs branch
+        if: always()
+        run: |
+          git config user.name "ci"
+          git config user.email "ci@users.noreply.github.com"
+          mv ci-logs /tmp/ci-logs || true
+          git fetch origin ci-logs || true
+          if git rev-parse --verify origin/ci-logs >/dev/null 2>&1; then
+            git checkout -B ci-logs origin/ci-logs
+          else
+            git checkout --orphan ci-logs && git rm -rf . >/dev/null 2>&1 || true
+          fi
+          rm -rf "api-${{ matrix.api }}"
+          cp -r /tmp/ci-logs/api-${{ matrix.api }} . || mkdir -p "api-${{ matrix.api }}"
+          echo "${{ github.sha }}" > "api-${{ matrix.api }}/commit.txt"
+          git add -A
+          git commit -m "logs api ${{ matrix.api }} run ${{ github.run_number }}" || true
+          for i in 1 2 3 4 5; do
+            git push origin ci-logs && break
+            git fetch origin ci-logs && git rebase origin/ci-logs || true
+            sleep 5
+          done
